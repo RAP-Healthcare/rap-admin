@@ -1,0 +1,43 @@
+<div class="header-datatable" *ngIf="header">
+    <div class="header-action" *ngIf="add">
+        <nb-icon
+            class="action-add"
+            icon="file-add"
+            (click)="doAdd()">
+        </nb-icon>
+    </div>
+    <div class="header-action" *ngIf="delete">
+        <nb-icon
+            class="action-trash"
+            icon="trash-2"
+            (click)="doDelete()">
+        </nb-icon>
+    </div>
+    <div class="header-filter" *ngIf="filter">
+        <xa-input-base-icon
+            [name]="'_filter.datatable'"
+            [placeholder]="'datatable.typesearch'"
+            [iconcursor]="true"
+            [(ngModel)]="_search"
+            (clickIcon)="doSearch($event)"
+            (keydown)="onKeyDown($event)"
+            (focus)="onFocusSearch()">
+        </xa-input-base-icon>
+    </div>
+    <div class="filter-funnel" *ngIf="filter && formGroupFilter">
+        <nb-icon
+            class="filter-icon-funnel"
+            [icon]="showFilter ? 'arrow-upward-outline' : 'funnel'"
+            (click)="doFilterFunnel()">
+        </nb-icon>
+    </div>
+</div>
+<div *ngIf="filter && formGroupFilter" xa-datatable-collapse #collapse>
+    <ng-content></ng-content>
+    <xa-button-submit
+      (onSubmit)="doFilter()"
+      [name]="'Search'"
+      [formGroup]="formGroupFilter"
+      [skeleton]="false">
+    </xa-button-submit>
+</div>

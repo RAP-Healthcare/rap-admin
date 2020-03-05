@@ -1,0 +1,101 @@
+<xa-page-outlet [header]="'Profile'">
+  <div class="row">
+    <div class="col-md-4 col-lg-4 col-xxxl-6">
+      <form [formGroup]="formGroupImage">
+        <xa-image-upload
+          [radius]="50"
+          [skeleton]="loadingForm"
+          [image]="image"
+          [uploadFn]="uploadFinished"
+          (onUpload)="uploadImage($event)"
+          formControlName="image">
+        </xa-image-upload>
+      </form>
+    </div>
+    <div class="col-md-8 col-lg-8 col-xxxl-6">
+      <form [formGroup]="formGroup">
+        <xa-input-text
+          [name]="'name'"
+          [label]="'Name'"
+          [required]="true"
+          [skeleton]="loadingForm"
+          formControlName="name">
+        </xa-input-text>
+        <xa-input-text
+          [name]="'email'"
+          [label]="'Email'"
+          [required]="true"
+          [pattern]="patternEmail"
+          [skeleton]="loadingForm"
+          formControlName="email">
+        </xa-input-text>
+        <xa-textarea
+          [name]="'address'"
+          [label]="'Address'"
+          [minLength]="minLength"
+          [skeleton]="loadingForm"
+          formControlName="address">
+        </xa-textarea>
+        <xa-select
+          [name]="'province'"
+          [label]="'Province'"
+          [api]="apiSelectProvince"
+          [queryParam]="paramSelectProvince"
+          [skeleton]="loadingForm"
+          (onSelect)="onSelectProvince($event)"
+          (onClear)="onClearProvince()"
+          formControlName="province">
+        </xa-select>
+        <xa-select
+          [name]="'city'"
+          [label]="'City'"
+          [api]="apiSelectCity"
+          [queryParam]="paramSelectCity"
+          [skeleton]="loadingForm"
+          (onSelect)="onSelectCity($event)"
+          (onClear)="onClearCity()"
+          formControlName="city">
+        </xa-select>
+        <xa-select
+          [name]="'district'"
+          [label]="'District'"
+          [api]="apiSelectDistrict"
+          [queryParam]="paramSelectDistrict"
+          [skeleton]="loadingForm"
+          (onSelect)="onSelectDistrict($event)"
+          (onClear)="onClearDistrict()"
+          formControlName="district">
+        </xa-select>
+        <xa-select
+          [name]="'subDistrict'"
+          [label]="'Sub District'"
+          [api]="apiSelectSubDistrict"
+          [queryParam]="paramSelectSubDistrict"
+          [skeleton]="loadingForm"
+          formControlName="subDistrict">
+        </xa-select>
+        <xa-input-text
+          [name]="'phoneNumber'"
+          [label]="'Telephone'"
+          [pattern]="patternPhoneNumber"
+          [skeleton]="loadingForm"
+          formControlName="phoneNumber">
+        </xa-input-text>
+        <xa-input-text
+          [name]="'mobileNumber'"
+          [label]="'Mobile Phone'"
+          [pattern]="patternPhoneNumber"
+          [skeleton]="loadingForm"
+          formControlName="mobileNumber">
+        </xa-input-text>
+        <xa-button-submit
+          (onSubmit)="onSubmit()"
+          [name]="'Update Profile'"
+          [disabled]="disabled"
+          [formGroup]="formGroup"
+          [skeleton]="loadingForm">
+        </xa-button-submit>
+      </form>
+    </div>
+  </div>
+</xa-page-outlet>

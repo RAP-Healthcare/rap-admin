@@ -1,0 +1,20 @@
+@import '~@xaphira/ngxa-theme/styles/themes';
+
+@include nb-install-component() {
+  xa-chartjs-pie,
+  xa-chartjs-bar,
+  xa-chartjs-line,
+  xa-chartjs-multiple-xaxis,
+  xa-chartjs-bar-horizontal,
+  xa-chartjs-radar {
+    display: block;
+    height: nb-theme(card-height-medium);
+    width: 100%;
+
+    ::ng-deep chart {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

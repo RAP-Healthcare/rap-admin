@@ -1,0 +1,7 @@
+<nb-card>
+  <nb-card-header>Google Maps with search</nb-card-header>
+  <nb-card-body>
+    <xa-search (positionChanged)="updateLocation($event)"></xa-search>
+    <xa-map [searchedLocation]="searchedLocation"></xa-map>
+  </nb-card-body>
+</nb-card>

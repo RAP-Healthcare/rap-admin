@@ -1,0 +1,148 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "googlemaps"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "outDir": "../../out-tsc/ngxa-admin",
+    "paths": {
+      "@angular/*": [
+        "../../node_modules/@angular/*"
+      ],
+      "@nebular/*": [
+        "../../node_modules/@nebular/*"
+      ],
+      "@xaphira/core": [
+        "../../node_modules/@xaphira/core/src",
+        "../../@xaphira/core/src"
+      ],
+      "@xaphira/core/*": [
+        "../../node_modules/@xaphira/core/src/*",
+        "../../@xaphira/core/src/*"
+      ],
+      "@xaphira/utils": [
+        "../../node_modules/@xaphira/utils/src",
+        "../../@xaphira/utils/src"
+      ],
+      "@xaphira/utils/*": [
+        "../../node_modules/@xaphira/utils/src/*",
+        "../../@xaphira/utils/src/*"
+      ],
+      "@xaphira/shared": [
+        "../../node_modules/@xaphira/shared/src",
+        "../../@xaphira/shared/src"
+      ],
+      "@xaphira/shared/*": [
+        "../../node_modules/@xaphira/shared/src/*",
+        "../../@xaphira/shared/src/*"
+      ],
+      "@xaphira/ngxa-theme": [
+        "../../node_modules/@xaphira/ngxa-theme/src",
+        "../../@xaphira/ngxa-theme/src"
+      ],
+      "@xaphira/ngxa-theme/*": [
+        "../../node_modules/@xaphira/ngxa-theme/src/*",
+        "../../@xaphira/ngxa-theme/src/*"
+      ],
+      "@xaphira/ngxa-storage": [
+        "../../node_modules/@xaphira/ngxa-storage/src",
+        "../../@xaphira/ngxa-storage/src"
+      ],
+      "@xaphira/ngxa-storage/*": [
+        "../../node_modules/@xaphira/ngxa-storage/src/*",
+        "../../@xaphira/ngxa-storage/src/*"
+      ],
+      "@xaphira/ngxa-theme/styles": [
+        "../../node_modules/@xaphira/ngxa-theme/src/lib/styles",
+        "../../@xaphira/ngxa-theme/src/lib/styles"
+      ],
+      "@xaphira/ngxa-theme/styles/*": [
+        "../../node_modules/@xaphira/ngxa-theme/src/lib/styles/*",
+        "../../@xaphira/ngxa-theme/src/lib/styles/*"
+      ],
+      "@xaphira/ngxa-common": [
+        "../../node_modules/@xaphira/ngxa-common/src",
+        "../../@xaphira/ngxa-common/src"
+      ],
+      "@xaphira/ngxa-common/*": [
+        "../../node_modules/@xaphira/ngxa-common/src/*",
+        "../../@xaphira/ngxa-common/src/*"
+      ],
+      "@xaphira/ngxa-auth": [
+        "../../node_modules/@xaphira/ngxa-auth/src",
+        "../../@xaphira/ngxa-auth/src"
+      ],
+      "@xaphira/ngxa-auth/*": [
+        "../../node_modules/@xaphira/ngxa-auth/src/*",
+        "../../@xaphira/ngxa-auth/src/*"
+      ],
+      "@xaphira/ngxa-extra": [
+        "../../node_modules/@xaphira/ngxa-extra/src",
+        "../../@xaphira/ngxa-extra/src"
+      ],
+      "@xaphira/ngxa-extra/*": [
+        "../../node_modules/@xaphira/ngxa-extra/src/*",
+        "../../@xaphira/ngxa-extra/src/*"
+      ],
+      "@xaphira/ngxa-sys": [
+        "../../node_modules/@xaphira/ngxa-sys/src",
+        "../../@xaphira/ngxa-sys/src"
+      ],
+      "@xaphira/ngxa-sys/*": [
+        "../../node_modules/@xaphira/ngxa-sys/src/*",
+        "../../@xaphira/ngxa-sys/src/*"
+      ],
+      "@xaphira/ngxa-mock": [
+        "../../node_modules/@xaphira/ngxa-mock/src",
+        "../../@xaphira/ngxa-mock/src"
+      ],
+      "@xaphira/ngxa-mock/*": [
+        "../../node_modules/@xaphira/ngxa-mock/src/*",
+        "../../@xaphira/ngxa-mock/src/*"
+      ],
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "exclude": [
+    "src/test.ts",
+    "src/**/*.spec.ts",
+    "../../node_modules/@nebular/**/*.spec.ts",
+    "../../dist/**"
+  ],
+  "include": [
+    "src/*.ts",
+    "src/**/*.ts",
+    "../../node_modules/@nebular/**/*.ts",
+    "../../@xaphira/core/**/*.ts",
+    "../../@xaphira/utils/**/*.ts",
+    "../../@xaphira/ngxa-theme/**/*.ts",
+    "../../@xaphira/ngxa-common/**/*.ts",
+    "../../@xaphira/ngxa-mock/**/*.ts",
+    "../../@xaphira/ngxa-auth/**/*.ts",
+    "../../@xaphira/ngxa-extra/**/*.ts",
+    "../../@xaphira/ngxa-sys/**/*.ts"
+  ]
+}

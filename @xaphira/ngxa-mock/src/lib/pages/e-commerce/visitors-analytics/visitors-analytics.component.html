@@ -1,0 +1,18 @@
+<nb-card size="medium">
+  <nb-card-header>
+    <h3>Visitors Analytics</h3>
+    <div class="subtitle">Consumption</div>
+  </nb-card-header>
+  <nb-card-body>
+    <div class="chart-container">
+      <div class="chart-header">
+        <xa-legend-chart [legendItems]="chartLegend"></xa-legend-chart>
+      </div>
+      <xa-visitors-analytics-chart [chartData]="visitorsAnalyticsData"></xa-visitors-analytics-chart>
+    </div>
+  </nb-card-body>
+
+  <xa-slide-out [showVisitorsStatistics]="true">
+    <xa-visitors-statistics [value]="pieChartValue"></xa-visitors-statistics>
+  </xa-slide-out>
+</nb-card>

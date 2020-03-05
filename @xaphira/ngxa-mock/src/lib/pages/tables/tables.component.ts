@@ -1,0 +1,8 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'xa-tables',
+  template: `<router-outlet></router-outlet>`,
+})
+export class TablesComponent {
+}

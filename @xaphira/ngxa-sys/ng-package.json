@@ -1,0 +1,16 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/@xaphira/ngxa-sys",
+  "lib": {
+    "entryFile": "src/index.ts",
+    "umdModuleIds": {
+      "@nebular/theme": "@nebular/theme",
+      "@ngx-translate/core": "@ngx-translate/core",
+      "@xaphira/core": "@xaphira/core",
+      "@xaphira/utils": "@xaphira/utils",
+      "@xaphira/ngxa-theme": "@xaphira/ngxa-theme",
+      "@xaphira/ngxa-common": "@xaphira/ngxa-common",
+      "@xaphira/ngxa-auth": "@xaphira/ngxa-auth"
+    }
+  }
+}

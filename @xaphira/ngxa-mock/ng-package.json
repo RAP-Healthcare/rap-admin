@@ -1,0 +1,26 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/@xaphira/ngxa-mock",
+  "lib": {
+    "entryFile": "src/index.ts",
+    "umdModuleIds": {
+      "@nebular/auth": "@nebular/auth",
+      "@nebular/security": "@nebular/security",
+      "@nebular/theme": "@nebular/theme",
+      "@xaphira/ngxa-theme": "@xaphira/ngxa-theme",
+      "ngx-echarts": "ngx-echarts",
+      "@swimlane/ngx-charts": "@swimlane/ngx-charts",
+      "angular2-chartjs": "angular2-chartjs",
+      "leaflet": "leaflet",
+      "@asymmetrik/ngx-leaflet": "@asymmetrik/ngx-leaflet",
+      "@agm/core": "@agm/core",
+      "echarts": "echarts",
+      "ng2-ckeditor": "ng2-ckeditor",
+      "ng2-smart-table": "ng2-smart-table",
+      "@xaphira/core": "@xaphira/core",
+      "@xaphira/shared": "@xaphira/shared",
+      "@xaphira/utils": "@xaphira/utils",
+      "@xaphira/ngxa-common": "@xaphira/ngxa-common"
+    }
+  }
+}

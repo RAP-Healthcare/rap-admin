@@ -1,0 +1,66 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "../../out-tsc/ngxa-storage",
+    "baseUrl": "./",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "inlineSources": true,
+    "typeRoots": [
+      "../../node_modules/@types"
+    ],
+    "lib": [
+      "dom",
+      "es2018"
+    ],
+    "paths": {
+      "@angular/*": [
+        "../../node_modules/@angular/*"
+      ],
+      "@nebular/*": [
+        "../../node_modules/@nebular/*"
+      ],
+      "@xaphira/core": [
+        "../../node_modules/@xaphira/core"
+      ],
+      "@xaphira/core/*": [
+        "../../node_modules/@xaphira/core/*"
+      ],
+      "@xaphira/utils": [
+        "../../node_modules/@xaphira/utils"
+      ],
+      "@xaphira/utils/*": [
+        "../../node_modules/@xaphira/utils/*"
+      ],
+      "@xaphira/shared": [
+        "../../node_modules/@xaphira/shared"
+      ],
+      "@xaphira/shared/*": [
+        "../../node_modules/@xaphira/shared/*"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "enableResourceInlining": true,
+  },
+  "exclude": [
+    "src/test.ts",
+    "**/*.spec.ts",
+    "../../dist/**"
+  ],
+  "include": [
+    "src/**/*",
+    "**/src/**/*"
+  ]
+}

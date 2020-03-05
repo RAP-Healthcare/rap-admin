@@ -1,0 +1,31 @@
+<xa-page-outlet [header]="'Settings'">
+  <form [formGroup]="formGroup">
+    <xa-select
+      [name]="'locale'"
+      [label]="'Locale'"
+      [required]="true"
+      [searchable]="false"
+      [skeleton]="loadingForm"
+      [api]="apiSelectLocale"
+      formControlName="locale">
+      <div *xaContentSelect="let item">
+        <span class="flag-icon flag-icon-{{item.icon ? item.icon : localeIcon}}"></span>
+        <span class="label-select">{{item.label ? item.label : item}}</span>
+      </div>
+    </xa-select>
+    <xa-checkbox
+      [name]="'checkbox'"
+      [label]="'Dark Mode'"
+      [data]="dataTheme"
+      [skeleton]="loadingForm"
+      formControlName="theme">
+    </xa-checkbox>
+    <xa-button-submit
+      (onSubmit)="onSubmit()"
+      [name]="'Update Settings'"
+      [formGroup]="formGroup"
+      [disabled]="disabled"
+      [skeleton]="loadingForm">
+    </xa-button-submit>
+  </form>
+</xa-page-outlet>

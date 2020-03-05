@@ -1,0 +1,624 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "@xaphira",
+  "projects": {
+    "@xaphira/core": {
+      "projectType": "library",
+      "root": "@xaphira/core",
+      "sourceRoot": "@xaphira/core/src",
+      "prefix": "xa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "@xaphira/core/tsconfig.lib.json",
+            "project": "@xaphira/core/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "@xaphira/core/src/test.ts",
+            "tsConfig": "@xaphira/core/tsconfig.spec.json",
+            "karmaConfig": "@xaphira/core/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "@xaphira/core/tsconfig.lib.json",
+              "@xaphira/core/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "**/dist/**"
+            ]
+          }
+        }
+      }
+    },
+    "@xaphira/utils": {
+      "projectType": "library",
+      "root": "@xaphira/utils",
+      "sourceRoot": "@xaphira/utils/src",
+      "prefix": "xa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "@xaphira/utils/tsconfig.lib.json",
+            "project": "@xaphira/utils/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "@xaphira/utils/src/test.ts",
+            "tsConfig": "@xaphira/utils/tsconfig.spec.json",
+            "karmaConfig": "@xaphira/utils/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "@xaphira/utils/tsconfig.lib.json",
+              "@xaphira/utils/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "**/dist/**"
+            ]
+          }
+        }
+      }
+    },
+    "@xaphira/shared": {
+      "projectType": "library",
+      "root": "@xaphira/shared",
+      "sourceRoot": "@xaphira/shared/src",
+      "prefix": "xa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "@xaphira/shared/tsconfig.lib.json",
+            "project": "@xaphira/shared/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "@xaphira/shared/src/test.ts",
+            "tsConfig": "@xaphira/shared/tsconfig.spec.json",
+            "karmaConfig": "@xaphira/shared/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "@xaphira/shared/tsconfig.lib.json",
+              "@xaphira/shared/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@xaphira/ngxa-theme": {
+      "projectType": "library",
+      "root": "@xaphira/ngxa-theme",
+      "sourceRoot": "@xaphira/ngxa-theme/src",
+      "prefix": "xa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "@xaphira/ngxa-theme/tsconfig.lib.json",
+            "project": "@xaphira/ngxa-theme/ng-package.json"
+          },
+          "scripts": [
+            "node_modules/pace-js/pace.min.js",
+            "node_modules/tinymce/tinymce.min.js",
+            "node_modules/tinymce/themes/modern/theme.min.js",
+            "node_modules/tinymce/plugins/link/plugin.min.js",
+            "node_modules/tinymce/plugins/paste/plugin.min.js",
+            "node_modules/tinymce/plugins/table/plugin.min.js",
+            "node_modules/echarts/dist/echarts.min.js",
+            "node_modules/echarts/dist/extension/bmap.min.js",
+            "node_modules/chart.js/dist/Chart.min.js"
+          ]
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "@xaphira/ngxa-theme/src/test.ts",
+            "tsConfig": "@xaphira/ngxa-theme/tsconfig.spec.json",
+            "karmaConfig": "@xaphira/ngxa-theme/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "@xaphira/ngxa-theme/tsconfig.lib.json",
+              "@xaphira/ngxa-theme/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "**/dist/**"
+            ]
+          }
+        }
+      }
+    },
+    "@xaphira/ngxa-common": {
+      "projectType": "library",
+      "root": "@xaphira/ngxa-common",
+      "sourceRoot": "@xaphira/ngxa-common/src",
+      "prefix": "xa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "@xaphira/ngxa-common/tsconfig.lib.json",
+            "project": "@xaphira/ngxa-common/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "@xaphira/ngxa-common/src/test.ts",
+            "tsConfig": "@xaphira/ngxa-common/tsconfig.spec.json",
+            "karmaConfig": "@xaphira/ngxa-common/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "@xaphira/ngxa-common/tsconfig.lib.json",
+              "@xaphira/ngxa-common/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@xaphira/ngxa-storage": {
+      "projectType": "library",
+      "root": "@xaphira/ngxa-storage",
+      "sourceRoot": "@xaphira/ngxa-storage/src",
+      "prefix": "xa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "@xaphira/ngxa-storage/tsconfig.lib.json",
+            "project": "@xaphira/ngxa-storage/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "@xaphira/ngxa-storage/src/test.ts",
+            "tsConfig": "@xaphira/ngxa-storage/tsconfig.spec.json",
+            "karmaConfig": "@xaphira/ngxa-storage/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "@xaphira/ngxa-storage/tsconfig.lib.json",
+              "@xaphira/ngxa-storage/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@xaphira/ngxa-auth": {
+      "projectType": "library",
+      "root": "@xaphira/ngxa-auth",
+      "sourceRoot": "@xaphira/ngxa-auth/src",
+      "prefix": "xa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "@xaphira/ngxa-auth/tsconfig.lib.json",
+            "project": "@xaphira/ngxa-auth/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "@xaphira/ngxa-auth/src/test.ts",
+            "tsConfig": "@xaphira/ngxa-auth/tsconfig.spec.json",
+            "karmaConfig": "@xaphira/ngxa-auth/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "@xaphira/ngxa-auth/tsconfig.lib.json",
+              "@xaphira/ngxa-auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@xaphira/ngxa-extra": {
+      "projectType": "library",
+      "root": "@xaphira/ngxa-extra",
+      "sourceRoot": "@xaphira/ngxa-extra/src",
+      "prefix": "xa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "@xaphira/ngxa-extra/tsconfig.lib.json",
+            "project": "@xaphira/ngxa-extra/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "@xaphira/ngxa-extra/src/test.ts",
+            "tsConfig": "@xaphira/ngxa-extra/tsconfig.spec.json",
+            "karmaConfig": "@xaphira/ngxa-extra/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "@xaphira/ngxa-extra/tsconfig.lib.json",
+              "@xaphira/ngxa-extra/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@xaphira/ngxa-sys": {
+      "projectType": "library",
+      "root": "@xaphira/ngxa-sys",
+      "sourceRoot": "@xaphira/ngxa-sys/src",
+      "prefix": "xa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "@xaphira/ngxa-sys/tsconfig.lib.json",
+            "project": "@xaphira/ngxa-sys/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "@xaphira/ngxa-sys/src/test.ts",
+            "tsConfig": "@xaphira/ngxa-sys/tsconfig.spec.json",
+            "karmaConfig": "@xaphira/ngxa-sys/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "@xaphira/ngxa-sys/tsconfig.lib.json",
+              "@xaphira/ngxa-sys/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@xaphira/ngxa-mock": {
+      "projectType": "library",
+      "root": "@xaphira/ngxa-mock",
+      "sourceRoot": "@xaphira/ngxa-mock/src",
+      "prefix": "xa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "@xaphira/ngxa-mock/tsconfig.lib.json",
+            "project": "@xaphira/ngxa-mock/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "@xaphira/ngxa-mock/src/test.ts",
+            "tsConfig": "@xaphira/ngxa-mock/tsconfig.spec.json",
+            "karmaConfig": "@xaphira/ngxa-mock/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "@xaphira/ngxa-mock/tsconfig.lib.json",
+              "@xaphira/ngxa-mock/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "**/dist/**"
+            ]
+          }
+        }
+      }
+    },
+    "@xaphira/ngxa-admin": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "prefix": "xa",
+          "styleext": "scss"
+        },
+        "@schematics/angular:directive": {
+          "prefix": "xa"
+        }
+      },
+      "root": "@xaphira/ngxa-admin",
+      "sourceRoot": "@xaphira/ngxa-admin/src",
+      "prefix": "xa",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "preserveSymlinks": true,
+            "rebaseRootRelativeCssUrls": true,
+            "outputPath": "dist/@xaphira/ngxa-admin",
+            "index": "@xaphira/ngxa-admin/src/index.html",
+            "main": "@xaphira/ngxa-admin/src/main.ts",
+            "tsConfig": "@xaphira/ngxa-admin/tsconfig.app.json",
+            "polyfills": "@xaphira/ngxa-admin/src/polyfills.ts",
+            "aot": false,
+            "assets": [
+              "@xaphira/ngxa-admin/src/favicon.ico",
+              "@xaphira/ngxa-admin/src/assets",
+              "@xaphira/ngxa-admin/src/favicon.png",
+              "@xaphira/ngxa-admin/src/manifest.webmanifest",
+              "@xaphira/ngxa-admin/src/ngxa-sw.js",
+              "@xaphira/ngxa-admin/src/ngsw.json",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/leaflet/dist/images",
+                "output": "/assets/img/markers"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@xaphira/ngxa-common/assets/ckeditor",
+                "output": "/assets/ckeditor"
+              }
+            ],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/typeface-exo/index.css",
+              "node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
+              "libs/ionicons/scss/ionicons.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "node_modules/socicon/css/socicon.css",
+              "node_modules/nebular-icons/scss/nebular-icons.scss",
+              "node_modules/angular-tree-component/dist/angular-tree-component.css",
+              "node_modules/pace-js/templates/pace-theme-flash.tmpl.css",
+              "node_modules/leaflet/dist/leaflet.css",
+              "node_modules/@xaphira/ngxa-theme/styles/styles.scss",
+              "node_modules/flag-icon-css/css/flag-icon.min.css"
+            ],
+            "scripts": [
+              "node_modules/pace-js/pace.min.js",
+              "node_modules/tinymce/tinymce.min.js",
+              "node_modules/tinymce/themes/modern/theme.min.js",
+              "node_modules/tinymce/plugins/link/plugin.min.js",
+              "node_modules/tinymce/plugins/paste/plugin.min.js",
+              "node_modules/tinymce/plugins/table/plugin.min.js",
+              "node_modules/echarts/dist/echarts.min.js",
+              "node_modules/echarts/dist/extension/bmap.min.js",
+              "node_modules/chart.js/dist/Chart.min.js",
+              "node_modules/@xaphira/ngxa-common/assets/ckeditor/ckeditor.js"
+			      ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "@xaphira/ngxa-admin/src/environments/environment.ts",
+                  "with": "@xaphira/ngxa-admin/src/environments/prod.environment.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": true,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "5mb",
+                  "maximumError": "15mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "@xaphira/ngxa-admin/ngsw-config.json"
+            },
+            "github": {
+              "fileReplacements": [
+                {
+                  "replace": "@xaphira/ngxa-admin/src/environments/environment.ts",
+                  "with": "@xaphira/ngxa-admin/src/environments/github.environment.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": true,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "5mb",
+                  "maximumError": "15mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "heroku": {
+              "fileReplacements": [
+                {
+                  "replace": "@xaphira/ngxa-admin/src/environments/environment.ts",
+                  "with": "@xaphira/ngxa-admin/src/environments/heroku.environment.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "@xaphira/ngxa-admin:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "@xaphira/ngxa-admin:build:production"
+            },
+            "github": {
+              "browserTarget": "@xaphira/ngxa-admin:build:github"
+            },
+            "heroku": {
+              "browserTarget": "@xaphira/ngxa-admin:build:heroku"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "@xaphira/ngxa-admin:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "@xaphira/ngxa-admin/src/test.ts",
+            "polyfills": "@xaphira/ngxa-admin/src/polyfills.ts",
+            "tsConfig": "@xaphira/ngxa-admin/tsconfig.spec.json",
+            "karmaConfig": "@xaphira/ngxa-admin/karma.conf.js",
+            "scripts": [
+              "node_modules/pace-js/pace.min.js",
+              "node_modules/tinymce/tinymce.min.js",
+              "node_modules/tinymce/themes/modern/theme.min.js",
+              "node_modules/tinymce/plugins/link/plugin.min.js",
+              "node_modules/tinymce/plugins/paste/plugin.min.js",
+              "node_modules/tinymce/plugins/table/plugin.min.js",
+              "node_modules/echarts/dist/echarts.min.js",
+              "node_modules/echarts/dist/extension/bmap.min.js",
+              "node_modules/chart.js/dist/Chart.min.js",
+              "node_modules/@xaphira/ngxa-common/assets/ckeditor/ckeditor.js"
+			      ],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/typeface-exo/index.css",
+              "node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
+              "libs/ionicons/scss/ionicons.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "node_modules/socicon/css/socicon.css",
+              "node_modules/nebular-icons/scss/nebular-icons.scss",
+              "node_modules/angular-tree-component/dist/angular-tree-component.css",
+              "node_modules/pace-js/templates/pace-theme-flash.tmpl.css",
+              "node_modules/@xaphira/ngxa-theme/styles/styles.scss",
+              "node_modules/flag-icon-css/css/flag-icon.min.css"
+            ],
+            "assets": [
+              "@xaphira/ngxa-admin/src/favicon.ico",
+              "@xaphira/ngxa-admin/src/assets",
+              "@xaphira/ngxa-admin/src/favicon.png",
+              "@xaphira/ngxa-admin/src/ngxa-sw.js",
+              "@xaphira/ngxa-admin/src/ngsw.json",
+              "@xaphira/ngxa-admin/src/manifest.webmanifest",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/leaflet/dist/images",
+                "output": "/assets/img/markers"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@xaphira/ngxa-common/assets/ckeditor",
+                "output": "/assets/ckeditor"
+              }
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "@xaphira/ngxa-admin/tsconfig.app.json",
+              "@xaphira/ngxa-admin/tsconfig.spec.json",
+              "@xaphira/ngxa-admin/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "**/dist/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "@xaphira/ngxa-admin/e2e/protractor.conf.js",
+            "devServerTarget": "@xaphira/ngxa-admin:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "@xaphira/ngxa-admin:serve:production"
+            },
+            "github": {
+              "devServerTarget": "@xaphira/ngxa-admin:serve:github"
+            },
+            "heroku": {
+              "devServerTarget": "@xaphira/ngxa-admin:serve:heroku"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "@xaphira/ngxa-admin"
+}

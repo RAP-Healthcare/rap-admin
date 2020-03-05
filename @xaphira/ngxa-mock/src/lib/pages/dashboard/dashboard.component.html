@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-xxxl-3 col-md-6" *ngFor="let statusCard of statusCards">
+    <xa-status-card [title]="statusCard.title" [type]="statusCard.type">
+      <i [ngClass]="statusCard.iconClass"></i>
+    </xa-status-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
+    <xa-temperature></xa-temperature>
+  </div>
+
+  <div class="col-xxxl-9 col-xxl-8 col-lg-7 col-md-6">
+    <xa-electricity></xa-electricity>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xxxl-9 col-xl-12">
+    <xa-rooms></xa-rooms>
+  </div>
+
+  <div class="col-xxxl-3 col-xxl-4 col-lg-7 col-md-6">
+    <xa-contacts></xa-contacts>
+  </div>
+
+  <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
+    <xa-solar [chartValue]="solarValue"></xa-solar>
+
+    <xa-kitten></xa-kitten>
+  </div>
+
+  <div class="col-xxxl-3 col-xxl-4 col-md-5">
+    <xa-traffic></xa-traffic>
+    <xa-weather></xa-weather>
+  </div>
+
+  <div class="col-xxxl-6 col-xxl-12 col-md-7">
+    <xa-security-cameras></xa-security-cameras>
+  </div>
+</div>

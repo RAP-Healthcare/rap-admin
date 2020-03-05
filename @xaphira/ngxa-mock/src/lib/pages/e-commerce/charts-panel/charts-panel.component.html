@@ -1,0 +1,22 @@
+<nb-card size="large">
+  <nb-tabset fullWidth (changeTab)="changeTab($event)">
+    <nb-tab tabTitle="Orders">
+      <div class="chart-container">
+        <xa-chart-panel-summary [summary]="chartPanelSummary"></xa-chart-panel-summary>
+        <xa-chart-panel-header [type]="period"
+                                (periodChange)="setPeriodAndGetChartData($event)">
+        </xa-chart-panel-header>
+        <xa-orders-chart #ordersChart [ordersChartData]="ordersChartData"></xa-orders-chart>
+      </div>
+    </nb-tab>
+    <nb-tab tabTitle="Profit" [lazyLoad]="true">
+      <div class="chart-container">
+        <xa-chart-panel-summary [summary]="chartPanelSummary"></xa-chart-panel-summary>
+        <xa-chart-panel-header [type]="period"
+                                (periodChange)="setPeriodAndGetChartData($event)">
+        </xa-chart-panel-header>
+        <xa-profit-chart #profitChart [profitChartData]="profitChartData"></xa-profit-chart>
+      </div>
+    </nb-tab>
+  </nb-tabset>
+</nb-card>

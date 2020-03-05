@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/@xaphira/ngxa-common",
+  "lib": {
+    "entryFile": "src/index.ts",
+    "umdModuleIds": {
+      "ng2-ckeditor": "ng2-ckeditor",
+      "@ngx-translate/core": "@ngx-translate/core",
+      "@nebular/theme": "@nebular/theme",
+      "@nebular/date-fns": "@nebular/date-fns",
+      "@nebular/moment": "@nebular/moment",
+      "@ng-select/ng-select": "@ng-select/ng-select",
+      "@swimlane/ngx-datatable": "@swimlane/ngx-datatable",
+      "@xaphira/core": "@xaphira/core",
+      "@xaphira/shared": "@xaphira/shared",
+      "@xaphira/utils": "@xaphira/utils",
+      "@xaphira/ngxa-theme": "@xaphira/ngxa-theme"
+    }
+  }
+}

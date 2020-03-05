@@ -1,0 +1,16 @@
+{
+  "defaultProject": "@xaphira/ionxa-admin",
+  "projects": {
+    "@xaphira/ionxa-admin": {
+      "type": "angular",
+      "integrations": {
+        "cordova": {
+          "root": "@xaphira/ionxa-admin"
+        }
+      }
+    }
+  },
+  "integrations": {
+    "cordova": {}
+  }
+}
