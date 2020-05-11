@@ -171,7 +171,7 @@
     "sockjs-client": "^1.4.0",
     "stompjs": "^2.3.3",
     "sw-toolbox": "3.6.0",
-    "tinymce": "4.9.7",
+    "tinymce": "5.2.2",
     "tslib": "^1.10.0",
     "typeface-exo": "0.0.22",
     "web-animations-js": "github:angular/web-animations-js#release_pr208",
